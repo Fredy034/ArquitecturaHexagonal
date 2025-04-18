@@ -1,0 +1,31 @@
+<div class="movie-card">
+  <img
+    [src]="backdropUrl"
+    [alt]="movie.title"
+    class="movie-card__backdrop"
+    loading="lazy"
+  />
+  <img
+    [src]="imageUrl"
+    [alt]="movie.title"
+    class="movie-card__image"
+    [title]="movie.title"
+    loading="eager"
+  />
+  <span class="movie-card__rating">{{
+    formatDecimal(movie.vote_average)
+  }}</span>
+  <img
+    *ngIf="languageFlagUrl"
+    [src]="languageFlagUrl"
+    [alt]="movie.original_language"
+    class="movie-card__flag"
+    [title]="'Original Language: ' + movie.original_language.toUpperCase()"
+    loading="lazy"
+  />
+  <div class="movie-card__header">
+    <h2 class="movie-card__title">{{ movie.title }}</h2>
+    <p class="movie-card__release-date">{{ formatDate(movie.release_date) }}</p>
+  </div>
+  <p class="movie-card__overview">{{ movie.overview }}</p>
+</div>

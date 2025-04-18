@@ -1,4 +1,4 @@
-import { MESSAGES } from '../constants/Messages';
+import { MESSAGES } from '../constants/messages.constant';
 
 // Example usage
 // const formattedValue = formatDecimal(1234.567);

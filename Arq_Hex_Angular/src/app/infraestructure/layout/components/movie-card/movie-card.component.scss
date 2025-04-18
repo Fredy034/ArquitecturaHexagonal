@@ -1,3 +1,10 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
 .movie-card {
   position: relative;
   background-color: var(--color-secondary);
@@ -10,21 +17,6 @@
   display: flex;
   flex-direction: column;
   height: auto;
-}
-@media (min-width: 640px) {
-  .movie-card {
-    max-width: 48%;
-  }
-}
-@media (min-width: 768px) {
-  .movie-card {
-    max-width: 31%;
-  }
-}
-@media (min-width: 1024px) {
-  .movie-card {
-    max-width: 23%;
-  }
 }
 .movie-card:hover {
   transform: scale(1.02);

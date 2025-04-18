@@ -1,0 +1,14 @@
+<div class="home">
+  <div class="home__header">
+    <h1>
+      {{ activeFetch === 'popular' ? 'Popular Movies' : 'Top Rated Movies' }}
+    </h1>
+    <button class="toggle-button" (click)="toggleFetch()">
+      {{ activeFetch === 'popular' ? 'Show Top Rated' : 'Show Popular' }}
+    </button>
+  </div>
+
+  <app-movie-list [functionToFetch]="functionToFetch" />
+  <app-footer />
+</div>
+

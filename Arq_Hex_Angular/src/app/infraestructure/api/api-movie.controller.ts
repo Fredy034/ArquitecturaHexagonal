@@ -1,9 +1,16 @@
-import { MovieInterface } from '../../domain/interfaces/MovieInterface';
-import { Movie } from '../../domain/models/Movie';
-import { MESSAGES } from '../shared/constants/Messages';
+import { Inject, Injectable } from '@angular/core';
+import { MovieInterface } from '../../../app/domain/interfaces/movie.interface';
+import { MOVIE_INTERFACE } from '../../../app/domain/interfaces/movie.token';
+import { Movie } from '../../../app/domain/models/movie.model';
+import { MESSAGES } from '../../../app/infraestructure/shared/constants/messages.constant';
 
+@Injectable({
+  providedIn: 'root',
+})
 export class ApiMovieController implements MovieInterface {
-  constructor(private _moviesService: MovieInterface) {}
+  constructor(
+    @Inject(MOVIE_INTERFACE) private readonly _moviesService: MovieInterface
+  ) {}
 
   async getPopularMovies(): Promise<Movie[]> {
     try {
