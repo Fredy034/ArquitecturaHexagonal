@@ -22,7 +22,8 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-/Arq_Hex_Angular/.vscode/*
+/Arq_Hex_Angular/.vscode
+/Arq_Hex_React/.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -41,3 +42,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Package-lock
+/Arq_Hex_React/package-lock.json
+/Arq_Hex_Angular/package-lock.json
+
+# Environment variables
+/Arq_Hex_React/.env

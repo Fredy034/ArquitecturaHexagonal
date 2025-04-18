@@ -1,0 +1,111 @@
+.movie-card {
+  position: relative;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+@media (min-width: 640px) {
+  .movie-card {
+    max-width: 48%;
+  }
+}
+@media (min-width: 768px) {
+  .movie-card {
+    max-width: 31%;
+  }
+}
+@media (min-width: 1024px) {
+  .movie-card {
+    max-width: 23%;
+  }
+}
+.movie-card:hover {
+  transform: scale(1.02);
+}
+.movie-card__backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  filter: blur(10px);
+  opacity: 0.4;
+  z-index: 0;
+}
+.movie-card__image {
+  width: 100%;
+  border-radius: 0.5rem 0;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+  z-index: 1;
+}
+.movie-card__rating {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  z-index: 2;
+}
+.movie-card__flag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.8rem;
+  height: 2rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background-color: var(--color-text);
+  padding: 0.15rem;
+  z-index: 3;
+}
+.movie-card__header,
+.movie-card__overview {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+.movie-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 0.5rem;
+}
+.movie-card__title {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-card__release-date {
+  min-width: 7.1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  text-align: right;
+}
+@media (max-width: 1024px) {
+  .movie-card__release-date {
+    min-width: auto;
+  }
+}
+.movie-card__overview {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
