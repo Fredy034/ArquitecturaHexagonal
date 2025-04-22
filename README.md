@@ -42,10 +42,6 @@ A continuación, se detallan las instrucciones para ejecutar cada uno de los pro
   ```bash
   ng build
   ```
-- Ejecutar pruebas:
-  ```bash
-  npm test
-  ```
 
 ---
 
@@ -78,14 +74,6 @@ A continuación, se detallan las instrucciones para ejecutar cada uno de los pro
 - Iniciar el servidor de desarrollo:
   ```bash
   npm run dev
-  ```
-- Construir el proyecto para producción:
-  ```bash
-  npm run build
-  ```
-- Previsualizar la aplicación construida:
-  ```bash
-  npm run preview
   ```
 
 ---
